@@ -3,3 +3,8 @@ from django.http import HttpResponse
 # Create your views here.
 def welcome(request):
     return HttpResponse("Welcome to students section of school stite")
+def courses(request):
+    return HttpResponse("courses section of school stite")
+
+def home(request):
+    return HttpResponse(" use /welcome for welcome message use /courses to see courses")
