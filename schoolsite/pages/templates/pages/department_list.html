@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+     {% block content %} 
+    {% for dep in departments %}    
+        <h2>{{dep.name}}</h2>
+                {% for emp in dep.employees.all%}     
+               <ul>                
+                    <li>name: {{emp.name}}</li>
+                    <li>Email: {{emp.email}}</li>
+                    <li>Salry: {{emp.salary}}</li>
+                </ul>
+                <hr>
+                {% endfor %}
+     {% endfor %}
+{% endblock %}
