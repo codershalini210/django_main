@@ -10,6 +10,14 @@ class Book(models.Model):
     no_of_pages = models.IntegerField(default=0)
     def __str__(self):
         return str(self.title)
+class Student(models.Model):
+    name = models.CharField(max_length=50)
+    age= models.IntegerField(default = 5 )
+    email= models.CharField(max_length=50)
+    contact = models.CharField(max_length=50)
+    isregular =  models.BooleanField(default=True)
+    def __str__(self):
+        return str(self.name)
 # below are commands for migrations 
 # python manage.py makemigrations
 # python manage.py migrate  
